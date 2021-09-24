@@ -1,8 +1,13 @@
 const express = require('express') /*llamando a express*/
 const path = require('path');
 
+var session = require('express-session');
+
 const app = express();
 app.use(express.static('public'));
+
+
+app.use(session({secret: 'Secreto!!'})); /*session prueba*/
 
 const port =3002;
 
@@ -12,3 +17,5 @@ const port =3002;
 res.sendFile( path.join(__dirname, './views/index.html'));
     })  
 
+
+    module.exports = app;

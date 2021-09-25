@@ -1,31 +1,104 @@
-<!DOCTYPE html> <!--DOCTYPE => VERSIÓN de la página*/-->
-<html lang="en"><!--HTMl => INICIO de la página*/-->
-<head> <!--HEAD => CONFIGURACIÓN de la página*/-->
-    <meta charset="UTF-8"> <!--UTF-8 => CONFIGURACIÓN de CARACTERES*/-->
+<!DOCTYPE html>
+<!--DOCTYPE => VERSIÓN de la página*/-->
+<html lang="es">
+<!--HTMl => INICIO de la página*/-->
+
+<head>
+    <!--HEAD => CONFIGURACIÓN de la página*/-->
+    <meta charset="UTF-8">
+    <!--UTF-8 => CONFIGURACIÓN de CARACTERES*/-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Enviando un archivo al navegador</title>
 </head>
-<body> <!--BODY => CONTENIDO de la página-->
-    <h1>¡Hola mundo!</h1>  <!--H1 hasta H6 y las P => ETIQUETAS DE TEXTOS Y P elemento de párrafo-->
+
+<!--HEADER: Encabezado, sirve para generar la cabecera del documento, o incluso también para generar la cabecera de una sección de contenido.Aca peuden ir, LOGOTIPO, BARRA DE NAVEGACION, BARRA DE BUSQUEDA Y ENLACES DE REDES SOCIALES-->
+<header>
+    <!--La navegación: nos sirve para generar una barra de navegación, sea la navegación principal o una navegación alternativa. Dentro de esta etiqueta, el árbol de navegación se suele imprlementar a través de listas desordenadas, elementpos de listas  y enlaces-->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <!--BODY => CONTENIDO de la página-->
+
+     <!--ARTICLE: Nos permite definir uan pieza de contenido independeiente.Es decir, contenido que podria funcionar por sí solo sin la necesidad de todo lo que lo rodea: un producto, un servicio, una noticia, etc-->
+
+    <article>
+        <h1>¡Hola mundo!</h1>
+    </article>
+    
+    <!--H1 hasta H6 y las P => ETIQUETAS DE TEXTOS Y P elemento de párrafo-->
     <p>Esto salio de maravilla</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum iusto, voluptate sequi, perspiciatis nulla, unde quaerat tempore inventore amet sed voluptas dignissimos fugiat dicta? Ullam eum magni voluptatum voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum iusto, voluptate sequi, perspiciatis
+        nulla, unde quaerat tempore inventore amet sed voluptas dignissimos fugiat dicta? Ullam eum magni voluptatum
+        voluptatibus.</p>
+
+    <!--TIPOS DE ENLACES-->
+    <!--Ruta EXTERNA, por fuera de nuestro sitio-->
+    <a href="https://www.google.com">Vamos a Google</a>
+
+    <!--Ruta LOCAL, estan dentro de nuestro sitio. Se recomienda que sean relativas siempre que sea posible-->
+    <a href="index.html">Inicio</a>
+
+    <!--ANCLAS sirve para hacer referencia a un fragmento o elemento dentro de una página; como puede ser una sección o un titular y pueden combinarse con las anteriores. Inicias con el carater # y hacen referencia a la propiedad id-->
+    <a href="#biografia">Biografía</a>
+    <!--CORREO, al hacer clic en ellos, se abrirá el programa de correo que tengamos coomo prederminado para enviar un correo a esa dirección de e-mail-->
+    <a href="mailto:user@server.com">Enviar mensaje</a>
+    <!--Teléfono, si estamos usando nuestro celular, se iniciará una llamada a ese número o aparecerá para llamar-->
+    <a href="cel:1145678912">Contactate</a>
+
+    <section>
+        <!--SECCION: Etiqueta que nos permite definir uns sección de contenido-->
+        <!--IMAGENES-->
+        <img width="334" height="420" src="image/img.jpeg" alt="Café de presentación">
+
+        <!--ALTOS Y ANCHOS DE UNA IMAGEN-->
+        <!--With(ancho): Los valores pueden ser tanto en PIXELES(solo escribiremos el número) como en PORCENTAJES (el número con el símbolo % al final)-->
+        <img width="334" height="420" src="image/img2.jpeg" alt="">
+        <!--HEIGHT(alto)-->
+        <img width="334" height="420" src="image/img3.jpeg" alt="">
+    </section>
+
+    <div>
+        <!--DIV => ETIQUETA de BLOQUE-->
+        <P>ETIQUETA DE BLOQUE</P>
+    </div>
+    <span>ETIQUETA DE LÍNEA</span>
+    <!--SPAN => ETIQUETA de LÍNEA-->
+    <ol>
+        <li>Primer ítem</li>
+        <!--LISTAS ORDENADAS-->
+    </ol>
+    <ol type="A">
+        <!--atributos => numérico (1), alfabético(A), numérico(i)-->
+        <li>Segundo ítem</li>
+    </ol>
+    <ul>
+        <li>Primer ítem</li>
+        <!--LISTAS DESORDENADAS-->
+    </ul>
+    <ul type="circle">
+        <!--atributos => disc, circle, square, none-->
+        <li>segundo ítem</li>
+    </ul>
+    <footer>
+        <section class="footer">
+            <p>Todos los derechos reservados</p>
+            <nav>
+                <ul><a href="#"></a>Terminos y condiciones</ul>
+                <ul><a href="#"></a>Mapa de sitio</ul>
+                <ul><a href="#"></a>Información</ul>
+            </nav>
+        </section>
+    </footer>
 </body>
-<div>  <!--DIV => ETIQUETA de BLOQUE-->
-<P>ETIQUETA DE BLOQUE</P>
-</div>
-<span>ETIQUETA DE LÍNEA</span>  <!--SPAN => ETIQUETA de LÍNEA-->
-<ol>
-    <li>Primer ítem</li> <!--LISTAS ORDENADAS-->
-</ol>
-<ol type="A"> <!--atributos => numérico (1), alfabético(A), numérico(i)-->
-    <li>Segundo ítem</li>
-</ol>
-<ul>
-    <li>Primer ítem</li> <!--LISTAS DESORDENADAS-->
-</ul>
-<ul type= "circle"> <!--atributos => disc, circle, square, none-->
-    <li>segundo ítem</li>
-</ul>
+
 </html>

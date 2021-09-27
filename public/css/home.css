@@ -1,0 +1,55 @@
+/* SELECTOR DE CLASE (SIEMPRE VA UN PUNTO ANTES DE CAADA PALABRA) teniendo la etiqueta asi llamamos al body coompleto y a su home*/
+.home {
+    color: black;
+    /*color de fuente*/
+    font-family: sans-serif;
+    /*estilo de funte*/
+    text-align: center;
+    /*texto centrado*/
+    font-size: 20px;
+    /*tamaño de texto*/
+    font-weight: normal;
+    /*peso (bold=NEGRITA)de la tipografia o podemos poner NORMAL*/
+    text-decoration: none;
+    /*none, saca el decorado de un texto, ejemplo, el subrayado de un enlace(hay varias propiedades)*/
+    text-transform: none;
+    /*tranforma el texto, tiene varios valores*/
+    line-height: 28px;
+    /*interlineado de un texto donde depende de cuantos px tiene el FONT-SIZE se le suma un 8px aprox más a este, si le ponemos demás el texto va a estar muy separado o si es muy bajo las lineas de texto se superponen*/
+    background-color: rgba(247, 247, 247, 0.5);
+    /*color de fondo*/
+
+    /*background-image: url(../image/fondo.jpeg); ¡¡PRUEBA!!fondo de la página pero poniendo una imagen(la imagen va a quedar por encima del color que ya tenga dicha página, por ende puede que noq uede visible)*/
+    /*background-repeat:repeat; /*controla el comportamientp de la imagen de fondo, por defecto tiene la propiedad REPEAT, donde se va a repetir indefinidamente. */
+    /*background-position: center bottom; Controla el comportamientp de la imágen de fondo, tiene varias propiedades*/
+    /*background-attachment: scroll; nos defíne lo qeu va a suceder con la imágen de fondo. SCROLL=> nos va a permitir que la imágen se desplaze en conjunto y FIXED=> deja la imagen fija*/
+    /*background-size: contain; nos permite controlar la imagen de fondo en esta caso EL TAMAÑO, CONTAIN=> hace que el ocupe todo el ancho o todo el alto lo que siceda primero, COVER => ocupado toda el área*/
+}
+
+#saludo {
+    color: blue;
+    /*llamando a un id*/
+}
+
+/*llamando al aclase de selector de texto solo anteponiendo un punto y su primera palabra*/
+.noticia {
+    font-size: 22px;
+    font-style: italic;
+    /*ESTILO DE LA TIPO GRAFIA, (ITALIC= CURSIVA)*/
+    color: rgba(255, 0, 0, 0.5);
+    /*el ultimo valor en decimal es ALPHA le da opacidad al color en este caso 0.5 es un 50% de su opacidad*/
+}
+
+p {
+    color: gray;
+}
+
+/*llamando un selector combinado*/
+h2.subtitulo {
+    color: yellow;
+}
+
+/*selector descendente*/
+ul#lista li {
+    text-align: center;
+}

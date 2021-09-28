@@ -1,3 +1,8 @@
-body{
-    width: 100%;
+body.home{
+    width: 100%; /*ANCHO*/   
+    font-family: 'Abel';
+}
+
+*{
+    box-sizing: border-box;
 }

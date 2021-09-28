@@ -1,11 +1,53 @@
+.main-header{
+    background-color:white;
+   padding: 20px;
+   width: 100%;
+}
+
+.logo{
+    width: 100px;
+}
+
+.copy-header{
+font-weight:400;
+text-align: center;
+}
+
+.hamburguer-button{
+    background-color: black;
+    color: #ffff;
+    display: block;
+    max-width: 49px;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
+
+.main-navbar{
+    display: none; /*no va a aparecer la navegacióin en tablet, celu... solo va aparecer en modo escritorio*/
+}
+.main-navbar ul{
+list-style: none; /*saca los punto o la decoración que tenga nuestro menú*/
+margin: 0;
+padding: 0;
+}
+.main-navbar a{
+    text-decoration: none; /*sacamos la decoracion por defecto del la ul, osea el subrrayado*/
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
 /* SELECTOR DE CLASE (SIEMPRE VA UN PUNTO ANTES DE CAADA PALABRA) teniendo la etiqueta asi llamamos al body coompleto y a su home*/
 .home {
     color: black;
     /*color de fuente*/
     font-family: sans-serif;
     /*estilo de funte*/
-    text-align: center;
-    /*texto centrado*/
+    /*  text-align: center; texto centrado*/
     font-size: 20px;
     /*tamaño de texto*/
     font-weight: normal;
@@ -16,20 +58,23 @@
     /*tranforma el texto, tiene varios valores*/
     line-height: 28px;
     /*interlineado de un texto donde depende de cuantos px tiene el FONT-SIZE se le suma un 8px aprox más a este, si le ponemos demás el texto va a estar muy separado o si es muy bajo las lineas de texto se superponen*/
-    background-color: rgba(247, 247, 247, 0.5);
-    /*color de fondo*/
+    background-color: rgba(247, 247, 247, 0.5);/*color de fondo*/
 
     /*background-image: url(../image/fondo.jpeg); ¡¡PRUEBA!!fondo de la página pero poniendo una imagen(la imagen va a quedar por encima del color que ya tenga dicha página, por ende puede que noq uede visible)*/
     /*background-repeat:repeat; /*controla el comportamientp de la imagen de fondo, por defecto tiene la propiedad REPEAT, donde se va a repetir indefinidamente. */
     /*background-position: center bottom; Controla el comportamientp de la imágen de fondo, tiene varias propiedades*/
     /*background-attachment: scroll; nos defíne lo qeu va a suceder con la imágen de fondo. SCROLL=> nos va a permitir que la imágen se desplaze en conjunto y FIXED=> deja la imagen fija*/
     /*background-size: contain; nos permite controlar la imagen de fondo en esta caso EL TAMAÑO, CONTAIN=> hace que el ocupe todo el ancho o todo el alto lo que siceda primero, COVER => ocupado toda el área*/
+    padding: 10px; /*RELLENO*/
 }
 
 #saludo {
-    color: blue;
+    color: rgba(199, 6, 119, 0.507);
     /*llamando a un id*/
-}
+    border-style: dashed;/*tipo de linea para el borde, tambien podemos utilizar SOLID, DOTTED, DOUBLE.*/
+    border-color: black; /*le da color al borde*/
+    margin: auto;
+} 
 
 /*llamando al aclase de selector de texto solo anteponiendo un punto y su primera palabra*/
 .noticia {
@@ -42,14 +87,71 @@
 
 p {
     color: gray;
+   
 }
+
 
 /*llamando un selector combinado*/
 h2.subtitulo {
     color: yellow;
+  
 }
 
 /*selector descendente*/
 ul#lista li {
     text-align: center;
 }
+
+/* PRUEBA DE CAJAS
+.caja-madre{
+    width: 600px;
+}
+
+.caja-hija{
+    width: 50%; dandole el valor del 50% es la mitad de lo que tiene la caja madre
+}*/
+
+/*IAMAGENES APLICANDO FLEXBOX*/
+.contenedor{
+    flex-direction: row; /*la direccion, tiene varias propiedades*/
+    justify-content: space-around; /*en este caso le da un espacio entre las imagenes, pero tiene varias propiedades que podemos ir cambiendo de propiedad desde la opcion inspeccionar*/
+    margin: 10px;
+}
+
+
+/*MEDIA QUERIS: se utiliza para adaptar las pantallas como por ejemplo en tabley y escritorio*/
+/*tablet*/
+@media (min-width : 768px){
+body.home{
+    display: block;
+}
+.main-header-top-bar{
+  
+    display: flex;
+    justify-content: space-between;
+}
+.copy-header{
+    max-width: 350px;
+    text-align: right;
+}
+.hamburguer-button{
+    display: none;
+}
+.main-navbar{
+   /*border: dotted 2px red; esta función nos ayuda para saber donde estamos parados cuando estamos editando*/
+    display: flex;
+}
+.main-navbar ul{
+    display: flex;
+}
+.main-navbar li{
+    margin: 0 15px;
+}
+}
+
+/*laptop*/
+@media (min-width : 1024px){
+    body.home{
+        display: block;
+    }
+    }

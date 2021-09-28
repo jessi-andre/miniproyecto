@@ -4,13 +4,13 @@ const path = require('path');
 var session = require('express-session');
 
 const app = express();
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 
 app.use(session({ secret: 'Secreto!!' })); /*session prueba*/
 
 const port = 3002;
- /*listen se encarga de levantar el servidor*/
+/*listen se encarga de levantar el servidor*/
 app.listen(port, () => console.log("Servidor corriendo en el puerto " + port));
 
 /*Rutas*/

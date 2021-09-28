@@ -9,53 +9,76 @@
     <!--UTF-8 => CONFIGURACIÓN de CARACTERES*/-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-    <title>Enviando un archivo al navegador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family = Abel & display = swap " rel=" stylesheet ">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/4e02860257.js" crossorigin="anonymous"></script>
+    <title>Mini proyecto</title>
 </head>
-
-<!--HEADER: Encabezado, sirve para generar la cabecera del documento, o incluso también para generar la cabecera de una sección de contenido.Aca peuden ir, LOGOTIPO, BARRA DE NAVEGACION, BARRA DE BUSQUEDA Y ENLACES DE REDES SOCIALES-->
-<header>
-    <!--La navegación: nos sirve para generar una barra de navegación, sea la navegación principal o una navegación alternativa. Dentro de esta etiqueta, el árbol de navegación se suele imprlementar a través de listas desordenadas, elementpos de listas  y enlaces-->
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
 
 <body class="home">
     <!--BODY => CONTENIDO de la página-->
 
-     <!--ARTICLE: Nos permite definir uan pieza de contenido independeiente.Es decir, contenido que podria funcionar por sí solo sin la necesidad de todo lo que lo rodea: un producto, un servicio, una noticia, etc-->
+    <!--HEADER: Encabezado, sirve para generar la cabecera del documento, o incluso también para generar la cabecera de una sección de contenido.Aca peuden ir, LOGOTIPO, BARRA DE NAVEGACION, BARRA DE BUSQUEDA Y ENLACES DE REDES SOCIALES-->
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="/image/logo.jpeg" class="logo">
+            <h2 class="copy-header">
+                <i class="fas fa-mug-hot"></i>
+                Veni a disfrutar nuestro café
+            </h2>
+        </div>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <!--La navegación: nos sirve para generar una barra de navegación, sea la navegación principal o una navegación alternativa. Dentro de esta etiqueta, el árbol de navegación se suele imprlementar a través de listas desordenadas, elementpos de listas  y enlaces-->
+        <nav class="main-navbar">
+            <ul class="navbar">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--ARTICLE: Nos permite definir uan pieza de contenido independeiente.Es decir, contenido que podria funcionar por sí solo sin la necesidad de todo lo que lo rodea: un producto, un servicio, una noticia, etc-->
 
     <article>
         <h1>¡Hola mundo!</h1>
     </article>
-    
+
+    <!--MEDIDAS RELATIVAS-->
+    <section class="caja-madre">
+        <article class="caja-hija">
+            <p>PRUEBA DE CAJAS</p>
+        </article>
+    </section>
+
     <!--H1 hasta H6 y las P => ETIQUETAS DE TEXTOS Y P elemento de párrafo-->
     <p>Esto salio de maravilla</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum iusto, voluptate sequi, perspiciatis
         nulla, unde quaerat tempore inventore amet sed voluptas dignissimos fugiat dicta? Ullam eum magni voluptatum
         voluptatibus.</p>
-        <!--SELECTOR DE id-->
-        <h3 id="saludo" >¡Hola selector de ID!</h3>
+    <!--SELECTOR DE id-->
+    <h3 id="saludo">¡Hola selector de ID!</h3>
 
-        <!--SELECTOR DE CLASE-->
-        <h4 class="noticia destacada" >Una noticia</h4>
+    <!--SELECTOR DE CLASE-->
+    <h4 class="noticia destacada">Una noticia</h4>
 
-        <!--SELECTOR DE ETIQUETA-->
-        <P>Probando la etiqueta P</P>
+    <!--SELECTOR DE ETIQUETA-->
+    <P>Probando la etiqueta P</P>
 
-        <!--SELECTORES COMBINADOS-->
-        <h2 class="subtitulo">Un subtítulo</h2>
+    <!--SELECTORES COMBINADOS-->
+    <h2 class="subtitulo">Un subtítulo</h2>
 
-        <!--SELECTORES DESCENDENTES: estos selectores sirven para agregar especifidad. En este caso vamos a atrapar al elemento (li) que esta dentro de la (ul) con el (id) LISTA-->
-        <ul id="lista">
-            <li>Primer ítem</li>
-        </ul>
+    <!--SELECTORES DESCENDENTES: estos selectores sirven para agregar especifidad. En este caso vamos a atrapar al elemento (li) que esta dentro de la (ul) con el (id) LISTA-->
+    <ul id="lista">
+        <li>Primer ítem</li>
+    </ul>
 
 
     <!--TIPOS DE ENLACES-->
@@ -72,11 +95,10 @@
     <!--Teléfono, si estamos usando nuestro celular, se iniciará una llamada a ese número o aparecerá para llamar-->
     <a href="cel:1145678912">Contactate</a>
 
-    <section>
+    <section class="contenedor">
         <!--SECCION: Etiqueta que nos permite definir uns sección de contenido-->
         <!--IMAGENES-->
         <img width="334" height="420" src="image/img.jpeg" alt="Café de presentación">
-
         <!--ALTOS Y ANCHOS DE UNA IMAGEN-->
         <!--With(ancho): Los valores pueden ser tanto en PIXELES(solo escribiremos el número) como en PORCENTAJES (el número con el símbolo % al final)-->
         <img width="334" height="420" src="image/img2.jpeg" alt="">

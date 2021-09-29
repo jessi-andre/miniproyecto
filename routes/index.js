@@ -3,6 +3,8 @@ const { route } = require('../app');
 var router = express.Router();
 
 /*Get home page.*/
+router.get('./register', register); /*nose si esta bien aún*/
+
 router.get('/', function(req, res, next){
     res.render('index', {title: 'express'});
 })

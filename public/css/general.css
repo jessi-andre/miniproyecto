@@ -6,3 +6,38 @@ body.home{
 *{
     box-sizing: border-box;
 }
+
+/*PSEUDO SELECTORES*/
+
+/*PSEUDO CLASE*/
+a{
+    color: violet;
+    text-decoration: none;
+}
+a:visited{
+    color: teal;
+}
+
+p{
+    color: tomato;
+    text-decoration: none;
+}
+p:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+.warning-text:hover{
+    color: red;
+    background-color: saddlebrown;
+}
+
+
+input:focus{
+    color: orange;
+    font-weight: bold;
+}
+
+/*PSEUDO ELEMENTO*/
+h3::before{
+    content:'¡Voy antes!';
+}

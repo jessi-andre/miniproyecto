@@ -17,6 +17,8 @@
     <title>Mini proyecto</title>
 </head>
 
+
+
 <body class="home">
     <!--BODY => CONTENIDO de la página-->
 
@@ -41,7 +43,6 @@
                 <li><a href="#">Quienes somos</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="/register">Registro</a></li>
             </ul>
         </nav>
     </header>
@@ -52,84 +53,33 @@
         <h1>¡Hola mundo!</h1>
     </article>
 
-    <!--FORMULARIOS-->
-    <form action="/register" method="POST" class="create-form">
-        <div class="control-formulario">
+    <form action="/register.html" method="POST">
+        <div>
             <label>Nombre completo:</label>
-            <input type="text" name="nombreDeUsuario" class="control" required>
+            <input type="text" name="nombreDeUsuario" required>
         </div>
-        <div class="control-formulario">
+        <div>
             <label>Contraseña:</label>
-            <input type="password" name="passwordUsuario" placeholder="Contraseña" class="control" required>
+            <input type="password" name="passwordUsuario" placeholder="Ej: Juana Manzur" required>
         </div>
-        <div class="control-formulario">
+        <div>
             <label>Correo electrónico:</label>
-            <input type="email" name="emailUsuario" class="control">
+            <input type="email" name="emailUsuario">
         </div>
-
-<!--PLACEHOLDER etiqueta de precio-->
-        <div class="control-formulario">
-            <label>Precio:</label>
-            <input type="text" name="precio" placeholder="123.56" class="control">
-        </div>
-
-        <!--Radio button-->
-        <div class="control-formulario">
-            <label><input type="radio" name="tipoSubcripcion" class="control">Quincenal</label>
-            <label><input type="radio" name="tipoSubcripcion" class="control">Mensual</label>
-            <label><input type="radio" name="tipoSubcripcion" class="control">Trimestral</label>
-            <label><input type="radio">Acepto los términos</label>
-        </div>
-
-        <!--CHECKBOK-->
-        <div class="control-formulario">
-            <label><input type="checkbok" name="pasatiempos" value="tv" class="control">Ver tv</label>
-            <label><input type="checkbok" name="pasatiempos" value="js" class="control">Aprender JavaScript</label>
-            <label><input type="checkbok" name="pasatiempos" value="html" class="control">Practicar Html</label>
-        </div>
-        <div class="control-formulario">
-            <label>País</label>
-            <select name="pais" class="control">
-                <option value="bolivia">Bolivia</option>
-                <option value="arg">Argentina</option>
-                <option value="Brasil">Brasil</option>
-                <option value="colom">Colombia</option>
-                <option value="chile">Chile</option>
-                <option value="perú">Perú</option>
-                <option value="vene">Venezuela</option>
-            </select>
-        </div>
-        <div class="control-formulario">
-            <label>Dejanos tu comentario</label>
-            <textarea name="dejaTuComentario" class="control"></textarea>
-        </div>
-        <button type="submit" class="boton-formulario" >Enviar</button> <!--se va a enviar a la ruta que le pusemos a la etiqueta form-->
-        <button type="reset"class="boton-formulario">Borrar</button> <!--borra lo que el usuario escriba-->
-        
-
-        <!--FORMULARIOS AVANZADOS-->
-        <div class="control-formulario">
-            <input type="date" name="fechaNacimiento" value="1985-08-28">
-            <!--AGREGAR LA FECHA CON FORMATO AMERICANO-->
-        </div>
-        <div class="control-formulario">
-            <input type="file" name="imagenPerfil" multiple>
-            <!--El valor MULTIPLE acepta múltiples imágenes-->
-        </div>
-        <div class="control-formulario">
-            <input type="file" name="imagenPerfil" accept=".jpg, .png">
-            <!--Acepta los formatos de la imágen que nosotro le agreguemos-->
-        </div>
-
-        <div class="control-formulario">
-            <label>Nombre completo:</label>
-            <input type="text" name="nombreUsuario">
-            <span class="feedback"></span>
-        </div>
-
-
-
-
+    
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar</button>
+    
+        <textarea name="dejaTuComentario" id="" cols="30" rows="10"></textarea>
+        <select>
+            <option value="bolivia">Bolivia</option>
+            <option value="arg">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="colom">Colombia</option>
+            <option value="chile">Chile</option>
+            <option value="perú">Perú</option>
+            <option value="vene">Venezuela</option>
+        </select>
     </form>
 
     <!--MEDIDAS RELATIVAS-->

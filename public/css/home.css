@@ -1,19 +1,30 @@
-.main-header{
-    background-color:white;
-   padding: 20px;
-   width: 100%;
+.main-header {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed; /*deja fijo el elemento*/
+    top: 0;
+    z-index: 100;
 }
 
-.logo{
+.logo {
     width: 100px;
+    animation: aumentar 1s ease-in  infinite alternate; /*animacion del logo*/
+}
+@keyframes aumentar{
+    0%{
+transform: scale(1);
+    }
+    100%{
+transform: scale(1.5);
+    }
+}
+.copy-header {
+    font-weight: 400;
+    text-align: center;
 }
 
-.copy-header{
-font-weight:400;
-text-align: center;
-}
-
-.hamburguer-button{
+.hamburguer-button {
     background-color: black;
     color: #ffff;
     display: block;
@@ -25,16 +36,21 @@ text-align: center;
     margin: auto;
 }
 
-.main-navbar{
-    display: none; /*no va a aparecer la navegacióin en tablet, celu... solo va aparecer en modo escritorio*/
+.main-navbar {
+    display: none;
+    /*no va a aparecer la navegacióin en tablet, celu... solo va aparecer en modo escritorio*/
 }
-.main-navbar ul{
-list-style: none; /*saca los punto o la decoración que tenga nuestro menú*/
-margin: 0;
-padding: 0;
+
+.main-navbar ul {
+    list-style: none;
+    /*saca los punto o la decoración que tenga nuestro menú*/
+    margin: 0;
+    padding: 0;
 }
-.main-navbar a{
-    text-decoration: none; /*sacamos la decoracion por defecto del la ul, osea el subrrayado*/
+
+.main-navbar a {
+    text-decoration: none;
+    /*sacamos la decoracion por defecto del la ul, osea el subrrayado*/
     color: #222222;
     display: inline-block;
     padding: 5px 0;
@@ -58,23 +74,27 @@ padding: 0;
     /*tranforma el texto, tiene varios valores*/
     line-height: 28px;
     /*interlineado de un texto donde depende de cuantos px tiene el FONT-SIZE se le suma un 8px aprox más a este, si le ponemos demás el texto va a estar muy separado o si es muy bajo las lineas de texto se superponen*/
-    background-color: rgba(247, 247, 247, 0.5);/*color de fondo*/
+    background-color: rgba(247, 247, 247, 0.5);
+    /*color de fondo*/
 
     /*background-image: url(../image/fondo.jpeg); ¡¡PRUEBA!!fondo de la página pero poniendo una imagen(la imagen va a quedar por encima del color que ya tenga dicha página, por ende puede que noq uede visible)*/
     /*background-repeat:repeat; /*controla el comportamientp de la imagen de fondo, por defecto tiene la propiedad REPEAT, donde se va a repetir indefinidamente. */
     /*background-position: center bottom; Controla el comportamientp de la imágen de fondo, tiene varias propiedades*/
     /*background-attachment: scroll; nos defíne lo qeu va a suceder con la imágen de fondo. SCROLL=> nos va a permitir que la imágen se desplaze en conjunto y FIXED=> deja la imagen fija*/
     /*background-size: contain; nos permite controlar la imagen de fondo en esta caso EL TAMAÑO, CONTAIN=> hace que el ocupe todo el ancho o todo el alto lo que siceda primero, COVER => ocupado toda el área*/
-    padding: 10px; /*RELLENO*/
+    padding: 10px;
+    /*RELLENO*/
 }
 
 #saludo {
     color: rgba(199, 6, 119, 0.507);
     /*llamando a un id*/
-    border-style: dashed;/*tipo de linea para el borde, tambien podemos utilizar SOLID, DOTTED, DOUBLE.*/
-    border-color: black; /*le da color al borde*/
+    border-style: dashed;
+    /*tipo de linea para el borde, tambien podemos utilizar SOLID, DOTTED, DOUBLE.*/
+    border-color: black;
+    /*le da color al borde*/
     margin: auto;
-} 
+}
 
 /*llamando al aclase de selector de texto solo anteponiendo un punto y su primera palabra*/
 .noticia {
@@ -87,14 +107,14 @@ padding: 0;
 
 p {
     color: gray;
-   
+
 }
 
 
 /*llamando un selector combinado*/
 h2.subtitulo {
     color: yellow;
-  
+
 }
 
 /*selector descendente*/
@@ -112,74 +132,193 @@ ul#lista li {
 }*/
 
 /*IAMAGENES APLICANDO FLEXBOX*/
-.contenedor{
-    flex-direction: row; /*la direccion, tiene varias propiedades*/
-    justify-content: space-around; /*en este caso le da un espacio entre las imagenes, pero tiene varias propiedades que podemos ir cambiendo de propiedad desde la opcion inspeccionar*/
+.contenedor {
+    flex-direction: row;
+    /*la direccion, tiene varias propiedades*/
+    justify-content: space-around;
+    /*en este caso le da un espacio entre las imagenes, pero tiene varias propiedades que podemos ir cambiendo de propiedad desde la opcion inspeccionar*/
     margin: 10px;
 }
 
-
-/*formulario*/
-.create-form{
- padding: 20px 15px;   
+.produc {
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0 15px;
+    position: relative;
+    margin: 10px;
 }
 
-.control-formulario{
+.produc:hover h2{
+    opacity: 1;
+    background-color: rgba(255,0,0,0.5);
+    border-radius: 50%;
+}
+
+.produc h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffff;
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: all 450ms;
+}
+
+/*formulario*/
+.create-form {
+    padding: 20px 15px;
+    /*margin-top: 240px;*/
+}
+
+.control-formulario {
     margin-bottom: 15px;
 }
 
-.control-formulario label{
+.control-formulario label {
     margin-bottom: 5px;
     font-style: italic;
     display: block;
 }
-.control{
-   /* width: 100%; lo puedo agregar en la vista de celular o tablet ya que le da un ancho del 100%*/ 
+
+.control {
+    width: 100%;
+    /*lo puedo agregar en la vista de celular o tablet ya que le da un ancho del 100%*/
     padding: 8px;
 }
 
-.boton-formulario{
-    background-color:#39b54a;
+.boton-formulario {
+    background-color: #39b54a;
     border: none;
     font-size: 20px;
     color: #ffffff;
-    padding:5px 10px;
+    padding: 5px 10px;
     border-radius: 5px;
+    transition: border-radius 450ms;
 }
+
+.boton-formulario:hover {
+    border-radius: 50%;
+    /*TRANSICIONES = CAMBIO PROGRESIVO agregandole esta propiedad la da un efecto al boton*/
+}
+
+.boton-formulario-animacion {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation-name: creciendo;
+    /*NOMBRE QUE LE QUEREMOS PONER A LA ANIMACIÓN*/
+    animation-duration: 1500ms;
+    /*DURACION EN MILISEGUNTOS más alto su número menor es su movimiento*/
+    animation-iteration-count: infinite;
+    /*CANTIDAD DE VECES QUE SE REPRODUSIRA NUESTRA ANIMACIÓN, PUEDE SER QUE SEA UN NUEMRO POSITIVO O ESTA MISMA (INFINITE)*/
+    animation-direction: alternate;
+    /*COMO SE VERA NUESTRA ANIMACIÓN*/
+}
+
+@keyframes creciendo {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: yellow;
+        height: 200px;
+        width: 200px;
+        opacity: 0.5;
+    }
+}
+
+
+
+/*POSITION*/
+
+/*.img-probando-position2{
+    position: relative; 
+    left: 100px;
+    top: 50px;
+} /*nos permite desplazar la caja en relación de su posición original a una nueva posición*/
+
+/*.img-probando-position1{
+    position: absolute; 
+    left: 100px;
+    top: 50px;
+} */
+
+/*Position relative + posicion absolute*/
+
+/*div {position: relative}
+.img-probando-position3{
+    position: absolute; 
+    right: 100px;
+   
+} */
+
+/*POSICIONAMIENTO FIJO*/
+/*{
+    position: fixed;
+    right: 50px;
+    botton: 50px;
+}*/
+
+
+
+/*Z-INDEX: nos permite CAMBIAR EL ORDEN DE LAS "CAPAS" dentro de un documento HTML*/
+/*{
+    position: relative;
+    z-index:10;
+}*/
+
+
+
+
 
 /*MEDIA QUERIS: se utiliza para adaptar las pantallas como por ejemplo en tabley y escritorio*/
 /*tablet*/
-@media (min-width : 768px){
-body.home{
-    display: block;
-}
-.main-header-top-bar{
-  
-    display: flex;
-    justify-content: space-between;
-}
-.copy-header{
-    max-width: 350px;
-    text-align: right;
-}
-.hamburguer-button{
-    display: none;
-}
-.main-navbar{
-   /*border: dotted 2px red; esta función nos ayuda para saber donde estamos parados cuando estamos editando*/
-    display: flex;
-}
-.main-navbar ul{
-    display: flex;
-}
-.main-navbar li{
-    margin: 0 15px;
-}
+
+@media (min-width : 768px) {
+    body.home {
+        display: block;
+    }
+
+    .main-header-top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copy-header {
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .hamburguer-button {
+        display: none;
+    }
+
+    .main-navbar {
+        /*border: dotted 2px red; esta función nos ayuda para saber donde estamos parados cuando estamos editando*/
+        display: flex;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 15px;
+    }
 }
 
 /*laptop*/
-@media (min-width : 1024px){
-    body.home{
+@media (min-width : 1024px) {
+    body.home {
         display: block;
     }
-    }
+}
